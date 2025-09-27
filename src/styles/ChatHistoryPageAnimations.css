@@ -1,0 +1,154 @@
+/* Chat History Page Animations */
+
+.chat-history-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-history-container .background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Header Animation - Fast */
+.chat-history-header {
+  animation: slideInDown 0.2s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+/* Content Animation - Fast */
+.chat-history-content {
+  animation: slideInUp 0.2s ease-out 0.05s both;
+  position: relative;
+  z-index: 1;
+}
+
+/* Chat Cards Animation - Glassy Theme */
+.chat-card {
+  animation: slideInLeft 0.2s ease-out both;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.chat-card:nth-child(1) { animation-delay: 0.05s; }
+.chat-card:nth-child(2) { animation-delay: 0.15s; }
+.chat-card:nth-child(3) { animation-delay: 0.25s; }
+.chat-card:nth-child(4) { animation-delay: 0.35s; }
+.chat-card:nth-child(5) { animation-delay: 0.45s; }
+.chat-card:nth-child(6) { animation-delay: 0.55s; }
+.chat-card:nth-child(7) { animation-delay: 0.65s; }
+.chat-card:nth-child(8) { animation-delay: 0.75s; }
+.chat-card:nth-child(9) { animation-delay: 0.85s; }
+.chat-card:nth-child(10) { animation-delay: 0.95s; }
+
+.chat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 220, 220, 0.4);
+}
+
+/* Empty State Animation - Glassy Theme */
+.chat-history-empty {
+  animation: fadeInScale 0.6s ease-out 0.2s both;
+}
+
+.empty-icon {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Loading State Animation - Glassy Theme */
+.chat-history-loading {
+  animation: fadeIn 0.6s ease-out 0.1s both;
+}
+
+/* Delete Button Animation - Glassy Theme */
+.chat-delete-button {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.chat-delete-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(224, 36, 94, 0.2) !important;
+  border-color: rgba(224, 36, 94, 0.5) !important;
+}
+
+/* Swipe Delete Animation */
+.swipe-delete {
+  animation: swipeLeft 0.3s ease-out forwards;
+}
+
+@keyframes swipeLeft {
+  from { 
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+  to { 
+    transform: translateX(-100%); 
+    opacity: 0; 
+  }
+}
+
+/* Header Button Animations - Glassy Theme */
+.chat-history-header .chat-header-button {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.chat-history-header .chat-header-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.4s ease;
+}
+
+.chat-history-header .chat-header-button:hover::before {
+  left: 100%;
+}
+
+.chat-history-header .chat-header-button:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 220, 220, 0.3) !important;
+  border-color: rgba(255, 220, 220, 0.5) !important;
+}
+
+/* Chat Metadata Animation - Glassy Theme */
+.chat-metadata {
+  animation: slideInRight 0.6s ease-out 0.3s both;
+}
+
+.chat-timestamp {
+  animation: slideInLeft 0.6s ease-out 0.4s both;
+}
+
+.chat-message-count {
+  animation: slideInRight 0.6s ease-out 0.5s both;
+}
+
+/* Glassy Card Effects */
+.chat-card {
+  background: rgba(255, 220, 220, 0.08) !important;
+  border: 1px solid rgba(255, 220, 220, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+  .chat-card:hover {
+    transform: translateY(-1px);
+  }
+}
