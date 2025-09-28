@@ -9,7 +9,8 @@
     "scripting",
     "tabs",
     "webNavigation",
-    "notifications"
+    "notifications",
+    "windows"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -25,8 +26,7 @@
     }
   ],
   "action": {
-    "default_popup": "popup.html",
-    "default_title": "Social Shopping Agent"
+    "default_title": "Social Shopping Agent - Click to open"
   },
   "icons": {
     "16": "icons/icon.png",
